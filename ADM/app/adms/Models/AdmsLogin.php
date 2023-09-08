@@ -12,8 +12,7 @@ class AdmsLogin extends AdmsConn
     private $resultBd;
     private $result;
 
-    function getResult()
-    {
+    function getResult(){
         return $this->result;
     }
 
@@ -48,7 +47,12 @@ class AdmsLogin extends AdmsConn
     private function valPassword()
     {
         if(password_verify($this->data['password'], $this->resultBd['password'])){
-            $_SESSION['msg'] = "<p style='color: green;'>Login realizado com sucesso!</p>";
+            //$_SESSION['msg'] = "<p style='color: green;'>Login realizado com sucesso!</p>";
+            $_SESSION['user_id'] = $this->resultBd['id'];
+            $_SESSION['user_name'] = $this->resultBd['name'];
+            $_SESSION['user_nickname'] = $this->resultBd['nickname'];
+            $_SESSION['user_email'] = $this->resultBd['email'];
+            $_SESSION['user_image'] = $this->resultBd['image'];
             $this->result = true;
             //echo $_SESSION['msg'];
         } else {

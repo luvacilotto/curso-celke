@@ -28,6 +28,13 @@ if(isset($_SESSION['msg'])) {
     <label for="user">Usuário:</label>
     <input type="text" name="user" id="user" placeholder="Digite o usuário" value="<?php echo $user; ?>"><br><br>
 
+    <?php
+    $password = "";
+    if (isset($valorForm['password'])) {
+        $password = $valorForm['password'];
+    }
+    ?>
+
     <label for="password">Senha:</label>
     <input type="password" name="password" id="password" placeholder="Digite a senha"><br><br>
 

@@ -21,13 +21,10 @@ class Dashboard
      */
     public function index(): void
     {
-        // Exibe a mensagem de erro na página
-        echo "Página Dashboard<br>";
+        // Define a mensagem
+        $this->data = "Bem vindo";
 
-        // Define a mensagem de erro
-        $this->data = "<p style='color: green;'>Bem vindo!</p>";
-
-        // Carrega a visão da página de erro usando a classe ConfigView
+        // Carrega a visão da página dashboard usando a classe ConfigView
         $loadView = new \Core\ConfigView("adms/Views/dashboard/dashboard", $this->data);
         $loadView->loadView();
     }

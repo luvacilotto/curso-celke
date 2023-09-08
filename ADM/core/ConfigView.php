@@ -19,7 +19,7 @@ class ConfigView
 
     /**
      * Carregar a View.
-     * Verificar se o arquivo existe e o inclui, caso exista. Se não existir, apresenta a mensagem de erro.
+     * Verifica se o arquivo existe. Se existir, será carregado. Se não existir, apresenta a mensagem de erro.
      *
      * @return void
      */
